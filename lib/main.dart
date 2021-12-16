@@ -11,10 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-          primaryColor: Colors.pinkAccent[200], accentColor: Colors.cyan[700]),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      title: 'User Profile',
+      home: const MyHomePage(title: 'User Profile'),
     );
   }
 }
@@ -29,52 +28,170 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffFAEDF0),
       appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColor,
-        title: Text(
-        widget.title,
-        style:TextStyle(
-                color: Theme.of(context).accentColor,
-              ),
-      )
+        backgroundColor: Color(0xff161853),
+        titleTextStyle: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+            color: Color(0xff97BFB4)),
+        title: Center(
+          child: Text("USER PROFILE"),
+        ),
       ),
       body: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-              style: TextStyle(
-                color: Theme.of(context).accentColor,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 20,
+            ),
+            CircleAvatar(
+              backgroundColor: Color(0xff97BFB4),
+              radius: 70,
+              child: CircleAvatar(
+                backgroundColor: Color(0xff161853),
+                radius: 65,
               ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context)
-                  .textTheme
-                  .headline4!
-                  .copyWith(color: Theme.of(context).accentColor),
+            SizedBox(
+              height: 90,
+            ),
+            Container(
+              width: 280,
+              height: 40,
+              decoration: BoxDecoration(
+                  color: Color(0xffFAEDF0),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20),
+                  ),
+                  border: Border.all(
+                    width: 2,
+                    color: Color(0xff97BFB4),
+                  )),
+              child: Center(
+                child: Text(
+                  "Elif İrem KÜLCÜ",
+                  style: TextStyle(
+                    color: Color(0xff161853),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: 280,
+              height: 40,
+              decoration: BoxDecoration(
+                  color: Color(0xffFAEDF0),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20),
+                  ),
+                  border: Border.all(
+                    width: 2,
+                    color: Color(0xff97BFB4),
+                  )),
+              child: Center(
+                child: Text(
+                  "eikulcu@gmail.com",
+                  style: TextStyle(
+                    color: Color(0xff161853),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: 280,
+              height: 40,
+              decoration: BoxDecoration(
+                color: Color(0xffFAEDF0),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20),
+                ),
+                border: Border.all(
+                  width: 2,
+                  color: Color(0xff97BFB4),
+                ),
+              ),
+              child: Center(
+                child: Text(
+                  "05434025505",
+                  style: TextStyle(
+                    color: Color(0xff161853),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 80,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width: 120,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: Color(0xffFAEDF0),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                    border: Border.all(
+                      width: 2,
+                      color: Color(0xff97BFB4),
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Giriş Yap",
+                      style: TextStyle(
+                        color: Color(0xff97BFB4),
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 120,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: Color(0xff97BFB4),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Kayıt Ol",
+                      style: TextStyle(
+                        color: Color(0xffFAEDF0),
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Theme.of(context).primaryColor,
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
