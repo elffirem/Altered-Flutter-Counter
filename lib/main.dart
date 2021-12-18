@@ -11,6 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: Color(0xff161853),
+          secondary: Color(0xff97BFB4),
+          background: Color(0xffFAEDF0),
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       title: 'User Profile',
       home: const MyHomePage(title: 'User Profile'),
@@ -31,13 +38,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFAEDF0),
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        backgroundColor: Color(0xff161853),
+        backgroundColor: Theme.of(context).colorScheme.primary,
         titleTextStyle: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 16,
-            color: Color(0xff97BFB4)),
+            color: Theme.of(context).colorScheme.secondary),
         title: Center(
           child: Text("USER PROFILE"),
         ),
@@ -52,10 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 20,
             ),
             CircleAvatar(
-              backgroundColor: Color(0xff97BFB4),
+              backgroundColor: Theme.of(context).colorScheme.secondary,
               radius: 70,
               child: CircleAvatar(
-                backgroundColor: Color(0xff161853),
+                backgroundColor: Theme.of(context).colorScheme.primary,
                 radius: 65,
               ),
             ),
@@ -66,19 +73,19 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 280,
               height: 40,
               decoration: BoxDecoration(
-                  color: Color(0xffFAEDF0),
+                  color: Theme.of(context).colorScheme.background,
                   borderRadius: BorderRadius.all(
                     Radius.circular(20),
                   ),
                   border: Border.all(
                     width: 2,
-                    color: Color(0xff97BFB4),
+                    color: Theme.of(context).colorScheme.secondary,
                   )),
               child: Center(
                 child: Text(
                   "Elif İrem KÜLCÜ",
                   style: TextStyle(
-                    color: Color(0xff161853),
+                    color: Theme.of(context).colorScheme.primary,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
@@ -92,19 +99,19 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 280,
               height: 40,
               decoration: BoxDecoration(
-                  color: Color(0xffFAEDF0),
+                  color: Theme.of(context).colorScheme.background,
                   borderRadius: BorderRadius.all(
                     Radius.circular(20),
                   ),
                   border: Border.all(
                     width: 2,
-                    color: Color(0xff97BFB4),
+                    color: Theme.of(context).colorScheme.secondary,
                   )),
               child: Center(
                 child: Text(
                   "eikulcu@gmail.com",
                   style: TextStyle(
-                    color: Color(0xff161853),
+                    color: Theme.of(context).colorScheme.primary,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
@@ -118,20 +125,20 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 280,
               height: 40,
               decoration: BoxDecoration(
-                color: Color(0xffFAEDF0),
+                color: Theme.of(context).colorScheme.background,
                 borderRadius: BorderRadius.all(
                   Radius.circular(20),
                 ),
                 border: Border.all(
                   width: 2,
-                  color: Color(0xff97BFB4),
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
               child: Center(
                 child: Text(
                   "05434025505",
                   style: TextStyle(
-                    color: Color(0xff161853),
+                    color: Theme.of(context).colorScheme.primary,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
@@ -142,27 +149,28 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 80,
             ),
             Container(
+              width: 280,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     width: 120,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: Color(0xffFAEDF0),
+                      color: Theme.of(context).colorScheme.background,
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
                       ),
                       border: Border.all(
                         width: 2,
-                        color: Color(0xff97BFB4),
+                        color: Theme.of(context).colorScheme.secondary,
                       ),
                     ),
                     child: Center(
                       child: Text(
                         "Giriş Yap",
                         style: TextStyle(
-                          color: Color(0xff97BFB4),
+                          color: Theme.of(context).colorScheme.secondary,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
@@ -173,7 +181,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     width: 120,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: Color(0xff97BFB4),
+                      color: Theme.of(context).colorScheme.secondary,
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
                       ),
@@ -182,7 +190,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Text(
                         "Kayıt Ol",
                         style: TextStyle(
-                          color: Color(0xffFAEDF0),
+                          color: Theme.of(context).colorScheme.background,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
