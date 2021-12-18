@@ -141,54 +141,56 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               height: 80,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  width: 120,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: Color(0xffFAEDF0),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20),
-                    ),
-                    border: Border.all(
-                      width: 2,
-                      color: Color(0xff97BFB4),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Giriş Yap",
-                      style: TextStyle(
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    width: 120,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Color(0xffFAEDF0),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
+                      ),
+                      border: Border.all(
+                        width: 2,
                         color: Color(0xff97BFB4),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Giriş Yap",
+                        style: TextStyle(
+                          color: Color(0xff97BFB4),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Container(
-                  width: 120,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: Color(0xff97BFB4),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20),
+                  Container(
+                    width: 120,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Color(0xff97BFB4),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
+                      ),
                     ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Kayıt Ol",
-                      style: TextStyle(
-                        color: Color(0xffFAEDF0),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                    child: Center(
+                      child: Text(
+                        "Kayıt Ol",
+                        style: TextStyle(
+                          color: Color(0xffFAEDF0),
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
